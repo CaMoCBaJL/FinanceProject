@@ -11,10 +11,33 @@ namespace FinanceApp.Domain.Abstract
 
         public required Duration Duration { get; init; }
 
-        public abstract int DaysUntilNextOperation { get; }
+        public virtual int DaysUntilNextOperation
+        {
+            get
+            {
+                return RepetitionPeriodStartDate.DayOfYear % RepetitionPeriodDaysAmount;
+            }
+        }
 
-        public abstract int OperationsAmount { get; }
+        public abstract int LeftOperationsAmount { get; }
 
         public abstract void Validate();
+
+        protected DateTime RepetitionPeriodStartDate
+        {
+            get
+            {
+                var startDate = DateTime.Now;
+
+                if (Duration.StartDate > startDate)
+                {
+                    startDate = Duration.StartDate;
+                }
+
+                return startDate;
+            }
+        }
+
+        protected abstract int RepetitionPeriodDaysAmount { get; }
     }
 }

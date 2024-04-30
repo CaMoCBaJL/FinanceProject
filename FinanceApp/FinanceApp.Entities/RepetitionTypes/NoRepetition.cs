@@ -6,7 +6,9 @@ namespace FinanceApp.Domain.Abstract.RepetitionTypes
     {
         public override int DaysUntilNextOperation => 0;
 
-        public override int OperationsAmount => 1;
+        public override int LeftOperationsAmount => 1;
+
+        protected override int RepetitionPeriodDaysAmount => 0;
 
         public override void Validate()
         {
