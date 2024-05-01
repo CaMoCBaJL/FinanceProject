@@ -7,8 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\FinanceApp.Domain.Abstract\FinanceApp.Domain.Abstract.csproj" />
     <ProjectReference Include="..\FinanceApp.Domain.Errors\FinanceApp.Domain.Exceptions.csproj" />
-    <ProjectReference Include="..\FinanceApp.Entities\FinanceApp.Domain.Abstract.csproj" />
   </ItemGroup>
 
 </Project>
