@@ -2,6 +2,9 @@
 
 namespace FinanceApp.Domain.Abstract
 {
+    /// <summary>
+    /// Сущность описывает период для повторяющейся операции(пополнение / зачисление купонов / досрочные погашения и т. п.)
+    /// </summary>
     public abstract class RepetitionType : Entity, IValidatable
     {
         protected uint _operationsAmount = 0;

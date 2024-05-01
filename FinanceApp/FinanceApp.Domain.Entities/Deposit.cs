@@ -2,6 +2,9 @@
 
 namespace FinanceApp.Domain.Entities
 {
+    /// <summary>
+    /// Вклад
+    /// </summary>
     public class Deposit: Entity
     {
         public decimal Amount { get; set; }

@@ -3,12 +3,14 @@
 namespace FinanceApp.Domain.Entities
 {
     /// <summary>
-    /// Эмитент
+    /// Акция
     /// </summary>
-    public class Issuer : Entity
+    public class Share: Entity
     {
         public string Name { get; set; }
 
-        public string FullName { get; set; }
+        public Issuer Issuer { get; init; }
+
+        public List<Dividend> Dividends { get; set; }
     }
 }

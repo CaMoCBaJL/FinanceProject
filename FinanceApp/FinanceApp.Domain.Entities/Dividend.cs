@@ -2,6 +2,9 @@
 
 namespace FinanceApp.Domain.Entities
 {
+    /// <summary>
+    /// Дивиденд
+    /// </summary>
     public class Dividend: Entity
     {
         public DateTime PaymentDate { get; set; }
