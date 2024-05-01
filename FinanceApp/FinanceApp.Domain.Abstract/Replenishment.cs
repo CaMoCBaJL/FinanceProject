@@ -1,6 +1,6 @@
-﻿using FinanceApp.Domain.Abstract;
+﻿using FinanceApp.Domain.Abstract.Repetitions;
 
-namespace FinanceApp.Domain.Entities
+namespace FinanceApp.Domain.Abstract
 {
     /// <summary>
     /// Пополнение счета (в случае с долговыми инструментами - досрочный платеж)

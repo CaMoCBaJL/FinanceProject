@@ -1,6 +1,6 @@
 ﻿using FinanceApp.Domain.Exceptions;
 
-namespace FinanceApp.Domain.Abstract.RepetitionTypes
+namespace FinanceApp.Domain.Abstract.Repetitions.RepetitionTypes
 {
     public class NoRepetition : RepetitionType
     {

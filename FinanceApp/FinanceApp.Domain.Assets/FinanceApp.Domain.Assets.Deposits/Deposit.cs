@@ -1,11 +1,12 @@
 ﻿using FinanceApp.Domain.Abstract;
+using FinanceApp.Domain.Abstract.Repetitions;
 
-namespace FinanceApp.Domain.Entities
+namespace FinanceApp.Domain.Assets.Deposits
 {
     /// <summary>
     /// Вклад
     /// </summary>
-    public class Deposit: Entity
+    public abstract class Deposit : Entity
     {
         public decimal Amount { get; set; }
 

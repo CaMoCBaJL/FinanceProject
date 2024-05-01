@@ -1,8 +1,8 @@
 ﻿using FinanceApp.Domain.Abstract;
 
-namespace FinanceApp.Domain.Entities
+namespace FinanceApp.Domain.Assets.Bonds
 {
-    public abstract class BondTicket: Entity
+    public abstract class BondTicket : Entity
     {
         public decimal Cost { get; set; }
 

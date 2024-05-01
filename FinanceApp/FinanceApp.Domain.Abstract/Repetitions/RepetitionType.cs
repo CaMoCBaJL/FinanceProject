@@ -1,6 +1,6 @@
 ﻿using FinanceApp.Domain.Abstract.Interfaces;
 
-namespace FinanceApp.Domain.Abstract
+namespace FinanceApp.Domain.Abstract.Repetitions
 {
     /// <summary>
     /// Сущность описывает период для повторяющейся операции(пополнение / зачисление купонов / досрочные погашения и т. п.)

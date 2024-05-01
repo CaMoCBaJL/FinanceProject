@@ -1,6 +1,7 @@
 ﻿using FinanceApp.Domain.Abstract;
+using FinanceApp.Domain.Abstract.Repetitions;
 
-namespace FinanceApp.Domain.Entities
+namespace FinanceApp.Domain.Assets.Bonds
 {
     /// <summary>
     /// Облигация

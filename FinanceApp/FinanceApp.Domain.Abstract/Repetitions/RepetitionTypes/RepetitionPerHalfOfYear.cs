@@ -1,4 +1,4 @@
-﻿namespace FinanceApp.Domain.Abstract.RepetitionTypes
+﻿namespace FinanceApp.Domain.Abstract.Repetitions.RepetitionTypes
 {
     public class RepetitionPerHalfOfYear : RepetitionType
     {
@@ -12,10 +12,10 @@
 
         public override void Validate()
         {
-            if (Duration.EndDate.Subtract(Duration.StartDate).TotalDays <) 
-            {
-                
-            }
+            //if (Duration.EndDate.Subtract(Duration.StartDate).TotalDays <)
+            //{
+
+            //}
         }
 
         protected override int RepetitionPeriodDaysAmount => 182;

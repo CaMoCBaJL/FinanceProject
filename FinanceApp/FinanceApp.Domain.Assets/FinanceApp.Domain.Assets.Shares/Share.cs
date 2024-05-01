@@ -1,11 +1,11 @@
 ﻿using FinanceApp.Domain.Abstract;
 
-namespace FinanceApp.Domain.Entities
+namespace FinanceApp.Domain.Assets.Shares
 {
     /// <summary>
     /// Акция
     /// </summary>
-    public class Share: Entity
+    public abstract class Share : TradableEntity
     {
         public string Name { get; set; }
 

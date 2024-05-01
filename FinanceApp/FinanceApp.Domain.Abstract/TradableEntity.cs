@@ -1,6 +1,6 @@
 ﻿namespace FinanceApp.Domain.Abstract
 {
-    public class TradableEntity: Entity
+    public class TradableEntity: CashFlow
     {
         public required DateTime BuyDate { get; set; }
 

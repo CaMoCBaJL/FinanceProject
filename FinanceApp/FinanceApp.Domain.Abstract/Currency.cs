@@ -1,6 +1,4 @@
-﻿using FinanceApp.Domain.Abstract;
-
-namespace FinanceApp.Domain.Entities
+﻿namespace FinanceApp.Domain.Abstract
 {
     public class Currency : Entity
     {
