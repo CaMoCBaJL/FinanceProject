@@ -1,46 +1,77 @@
-﻿namespace FinanceApp.Domain.Abstract.Repetitions.RepetitionTypes
+﻿using FinanceApp.Domain.Exceptions;
+
+namespace FinanceApp.Domain.Abstract.Repetitions.RepetitionTypes
 {
     public class RepetitionPerYear : RepetitionType
     {
-        private RepetitionPerYear(Duration duration) : base(duration)
-        {
-        }
-
         public override int LeftOperationsAmount => throw new NotImplementedException();
 
         protected override int RepetitionPeriodDaysAmount => throw new NotImplementedException();
+    }
 
-        public static RepetitionPerYear Create(Duration duration)
+    public class ValueParser<TData, TEntityForValue>
+        where TEntityForValue: Entity<TData>
+    {
+        public virtual TData Parse(TData sourceData)
         {
-            throw new NotImplementedException();
-
-            return new RepetitionPerYear(duration);
+            return sourceData;
         }
     }
 
-    public class B
+    public abstract class ValueValidator<TData, TEntityToValidate>
+        where TEntityToValidate: Entity<TData>
     {
-
+        public abstract void Validate(TData data);
     }
 
-    public class C: B
+    public abstract class EntityFactory<TValueType, TResultType, TValidatorType, TParserType>
+        where TResultType : Entity<TValueType>, new()
+        where TValidatorType : ValueValidator<TValueType, TResultType>, new()
+        where TParserType: ValueParser<TValueType, TResultType>, new()
     {
-
-    }
-
-    public static class BExtentions
-    {
-        public static int BB(this B b)
+        //entity creation life cycle
+        public TResultType Create(TValueType value)
         {
-            return 1;
+            ValidateValue(value);
+
+            var parsedValue = ParseValue(value);
+
+            return CreateEntity(parsedValue);
+        }
+
+        protected virtual void ValidateValue(TValueType value)
+        {
+            new TValidatorType().Validate(value);
+        }
+
+        protected virtual TValueType ParseValue(TValueType value)
+        {
+            return new TParserType().Parse(value);
+        }
+
+        protected virtual TResultType CreateEntity(TValueType value)
+        {
+            var result = new TResultType();
+            result.Value = value;
+
+            return result;
         }
     }
 
-    public class D
+    public class NoRepetitionValidator : ValueValidator<Duration, NoRepetition>
     {
-        public void F()
+        public override void Validate(Duration duration)
         {
-            new C().BB();
+            if (duration.StartDate != duration.EndDate)
+            {
+                throw new RepetitionPeriodIncorrectException();
+            }
         }
+    }
+
+    //the last one question: how prevent entity creation using constructor
+    public class NoRepetitionFactory : EntityFactory<Duration, NoRepetition, NoRepetitionValidator, ValueParser<Duration, NoRepetition>>
+    {
+       public NoRepetitionFactory() { }
     }
 }

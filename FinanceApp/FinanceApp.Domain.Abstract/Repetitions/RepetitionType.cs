@@ -3,16 +3,10 @@
     /// <summary>
     /// Сущность описывает период для повторяющейся операции(пополнение / зачисление купонов / досрочные погашения и т. п.)
     /// </summary>
-    public abstract class RepetitionType : Entity
+    public abstract class RepetitionType : Entity<Duration>
     {
         protected uint _operationsAmount = 0;
         protected uint _daysUntilNextOperation = 0;
-        protected Duration _duration;
-
-        protected RepetitionType(Duration Duration) 
-        {
-            _duration = Duration;
-        }
 
         public virtual int DaysUntilNextOperation
         {
@@ -30,9 +24,9 @@
             {
                 var startDate = DateTime.Now;
 
-                if (_duration.StartDate > startDate)
+                if (Value.StartDate > startDate)
                 {
-                    startDate = _duration.StartDate;
+                    startDate = Value.StartDate;
                 }
 
                 return startDate;

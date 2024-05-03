@@ -1,5 +1,6 @@
 ﻿using FinanceApp.Domain.Abstract;
 using FinanceApp.Domain.Abstract.Repetitions;
+using FinanceApp.Domain.Abstract.Repetitions.RepetitionTypes;
 
 namespace FinanceApp.Domain.Assets.Bonds
 {
