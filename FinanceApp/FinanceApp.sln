@@ -19,11 +19,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{B3AB0F
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Liabilities", "Liabilities", "{3F4B0602-798D-49B1-A0BD-B4651D9572D4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinanceApp.Domain.Assets.Shares", "FinanceApp.Domain.Assets\FinanceApp.Domain.Assets.Shares\FinanceApp.Domain.Assets.Shares.csproj", "{A725AE55-7E8F-47E0-90B5-23A33D105969}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FinanceApp.Domain.Assets.Shares", "FinanceApp.Domain.Assets\FinanceApp.Domain.Assets.Shares\FinanceApp.Domain.Assets.Shares.csproj", "{A725AE55-7E8F-47E0-90B5-23A33D105969}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinanceApp.Domain.Assets.Deposits", "FinanceApp.Domain.Assets\FinanceApp.Domain.Assets.Deposits\FinanceApp.Domain.Assets.Deposits.csproj", "{BDFB5E68-FA54-4547-BABD-89A418331863}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FinanceApp.Domain.Assets.Deposits", "FinanceApp.Domain.Assets\FinanceApp.Domain.Assets.Deposits\FinanceApp.Domain.Assets.Deposits.csproj", "{BDFB5E68-FA54-4547-BABD-89A418331863}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinanceApp.Domain.Liabilities.Debts", "FinanceApp.Domain.Liabilities\FinanceApp.Domain.Liabilities.Debts\FinanceApp.Domain.Liabilities.Debts.csproj", "{92E60BBD-D24E-4801-AFB0-85808F3D95EA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FinanceApp.Domain.Liabilities.Debts", "FinanceApp.Domain.Liabilities\FinanceApp.Domain.Liabilities.Debts\FinanceApp.Domain.Liabilities.Debts.csproj", "{92E60BBD-D24E-4801-AFB0-85808F3D95EA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

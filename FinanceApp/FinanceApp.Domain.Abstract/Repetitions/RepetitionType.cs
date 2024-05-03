@@ -1,18 +1,18 @@
-﻿using FinanceApp.Domain.Abstract.Interfaces;
-
-namespace FinanceApp.Domain.Abstract.Repetitions
+﻿namespace FinanceApp.Domain.Abstract.Repetitions
 {
     /// <summary>
     /// Сущность описывает период для повторяющейся операции(пополнение / зачисление купонов / досрочные погашения и т. п.)
     /// </summary>
-    public abstract class RepetitionType : Entity, IValidatable
+    public abstract class RepetitionType : Entity
     {
         protected uint _operationsAmount = 0;
         protected uint _daysUntilNextOperation = 0;
+        protected Duration _duration;
 
-        protected RepetitionType() { }
-
-        public required Duration Duration { get; init; }
+        protected RepetitionType(Duration Duration) 
+        {
+            _duration = Duration;
+        }
 
         public virtual int DaysUntilNextOperation
         {
@@ -24,17 +24,15 @@ namespace FinanceApp.Domain.Abstract.Repetitions
 
         public abstract int LeftOperationsAmount { get; }
 
-        public abstract void Validate();
-
         protected DateTime RepetitionPeriodStartDate
         {
             get
             {
                 var startDate = DateTime.Now;
 
-                if (Duration.StartDate > startDate)
+                if (_duration.StartDate > startDate)
                 {
-                    startDate = Duration.StartDate;
+                    startDate = _duration.StartDate;
                 }
 
                 return startDate;

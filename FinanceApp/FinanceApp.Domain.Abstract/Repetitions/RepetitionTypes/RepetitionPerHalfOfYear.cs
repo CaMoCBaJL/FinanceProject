@@ -2,20 +2,28 @@
 {
     public class RepetitionPerHalfOfYear : RepetitionType
     {
+        private RepetitionPerHalfOfYear(Duration duration): base(duration) 
+        {
+
+        }
+
         public override int LeftOperationsAmount
         {
             get
             {
-                return (int)Duration.EndDate.Subtract(RepetitionPeriodStartDate).TotalDays / RepetitionPeriodDaysAmount;
+                return (int)_duration.EndDate.Subtract(RepetitionPeriodStartDate).TotalDays / RepetitionPeriodDaysAmount;
             }
         }
 
-        public override void Validate()
+        public static RepetitionPerHalfOfYear Create(Duration duration)
         {
+            throw new NotImplementedException();
             //if (Duration.EndDate.Subtract(Duration.StartDate).TotalDays <)
             //{
 
             //}
+
+            return new RepetitionPerHalfOfYear(duration);
         }
 
         protected override int RepetitionPeriodDaysAmount => 182;

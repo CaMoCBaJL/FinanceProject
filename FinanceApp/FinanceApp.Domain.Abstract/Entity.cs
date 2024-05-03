@@ -1,6 +1,4 @@
-﻿using FinanceApp.Domain.Abstract.Interfaces;
-
-namespace FinanceApp.Domain.Abstract
+﻿namespace FinanceApp.Domain.Abstract
 {
     public abstract class Entity
     {
