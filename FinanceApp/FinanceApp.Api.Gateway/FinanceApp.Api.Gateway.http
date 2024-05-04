@@ -1,0 +1,6 @@
+@FinanceApp.Api.Gateway_HostAddress = http://localhost:5132
+
+GET {{FinanceApp.Api.Gateway_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
