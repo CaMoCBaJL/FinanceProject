@@ -1,4 +1,6 @@
-﻿namespace FinanceApp.Domain.Abstract
+﻿using FinanceApp.Domain.Abstract.EntityBase;
+
+namespace FinanceApp.Domain.Abstract
 {
     public abstract class CashFlow: Entity
     {

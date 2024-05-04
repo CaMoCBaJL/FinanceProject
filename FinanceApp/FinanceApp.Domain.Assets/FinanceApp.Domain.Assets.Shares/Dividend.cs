@@ -1,4 +1,4 @@
-﻿using FinanceApp.Domain.Abstract;
+﻿using FinanceApp.Domain.Abstract.EntityBase;
 
 namespace FinanceApp.Domain.Assets.Shares
 {

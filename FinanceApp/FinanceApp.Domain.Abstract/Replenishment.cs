@@ -1,4 +1,5 @@
-﻿using FinanceApp.Domain.Abstract.Repetitions;
+﻿using FinanceApp.Domain.Abstract.EntityBase;
+using FinanceApp.Domain.Abstract.Repetitions;
 
 namespace FinanceApp.Domain.Abstract
 {

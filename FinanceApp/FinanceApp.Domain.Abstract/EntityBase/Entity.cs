@@ -1,4 +1,4 @@
-﻿namespace FinanceApp.Domain.Abstract
+﻿namespace FinanceApp.Domain.Abstract.EntityBase
 {
     public abstract class Entity
     {

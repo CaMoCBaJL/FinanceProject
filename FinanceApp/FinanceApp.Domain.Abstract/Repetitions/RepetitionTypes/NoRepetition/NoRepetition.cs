@@ -2,13 +2,13 @@
 {
     public class NoRepetition : RepetitionType
     {
-        [Obsolete("Нельзя создавать данный объект напрямую. Воспользуйтесь соответсвующей фабрикой", true)]
+        [Obsolete(ErrorMessages.ConstructorUsageForbidden, true)]
         public NoRepetition() { }
 
-        public override int DaysUntilNextOperation => 0;
+        public override uint DaysUntilNextOperation => 0;
 
-        public override int LeftOperationsAmount => 1;
+        public override uint LeftOperationsAmount => 1;
 
-        protected override int RepetitionPeriodDaysAmount => 0;
+        protected override uint RepetitionPeriodDaysAmount => 0;
     }
 }

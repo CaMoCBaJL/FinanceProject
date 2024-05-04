@@ -1,4 +1,5 @@
 ﻿using FinanceApp.Domain.Abstract;
+using FinanceApp.Domain.Abstract.EntityBase;
 using FinanceApp.Domain.Abstract.Repetitions;
 
 namespace FinanceApp.Domain.Assets.Deposits

@@ -39,7 +39,7 @@ namespace WebApplication1.Controllers
 
             var date = DateTime.Now;
 
-            var r1 = new NoRepetitionFactory().Create(new Duration(date, date));
+            var r1 = new NoRepetitionFactory().Create(new Duration());
 
             var r2 = 1;
         }

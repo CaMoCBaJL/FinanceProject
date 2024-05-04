@@ -1,10 +1,8 @@
-﻿namespace FinanceApp.Domain.Abstract.Repetitions.RepetitionTypes.NoRepetition
-{
+﻿using FinanceApp.Domain.Abstract.EntityBase;
 
-    //the last one question: how prevent entity creation using constructor
-    //
+namespace FinanceApp.Domain.Abstract.Repetitions.RepetitionTypes.NoRepetition
+{
     public class NoRepetitionFactory : EntityFactory<Duration, NoRepetition, NoRepetitionValidator, ValueParser<Duration, NoRepetition>>
     {
-        public NoRepetitionFactory() { }
     }
 }
