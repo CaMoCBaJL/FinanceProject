@@ -1,8 +1,8 @@
 ﻿using FinanceApp.Domain.Exceptions;
 
-namespace FinanceApp.Domain.Abstract.Repetitions.RepetitionTypes
+namespace FinanceApp.Domain.Abstract.Repetitions.RepetitionTypes.NoRepetition
 {
-    public class NoRepetition: RepetitionType
+    public class NoRepetition : RepetitionType
     {
         public override int DaysUntilNextOperation => 0;
 
