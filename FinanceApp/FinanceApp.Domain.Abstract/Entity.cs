@@ -7,6 +7,8 @@
 
     public abstract class Entity<T> : Entity
     {
+        public Entity() { }
+
         public T Value { get; set; }
     }
 }

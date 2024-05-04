@@ -1,3 +1,5 @@
+using FinanceApp.Domain.Abstract;
+using FinanceApp.Domain.Abstract.Repetitions.RepetitionTypes.NoRepetition;
 using Microsoft.AspNetCore.Mvc;
 
 namespace WebApplication1.Controllers
@@ -29,5 +31,17 @@ namespace WebApplication1.Controllers
         //    })
         //    .ToArray();
         //}
+
+        [HttpGet]
+        public void Get()
+        {
+            //var r = new NoRepetition();
+
+            var date = DateTime.Now;
+
+            var r1 = new NoRepetitionFactory().Create(new Duration(date, date));
+
+            var r2 = 1;
+        }
     }
 }

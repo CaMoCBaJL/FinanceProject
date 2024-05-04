@@ -1,9 +1,10 @@
-﻿using FinanceApp.Domain.Exceptions;
-
-namespace FinanceApp.Domain.Abstract.Repetitions.RepetitionTypes.NoRepetition
+﻿namespace FinanceApp.Domain.Abstract.Repetitions.RepetitionTypes.NoRepetition
 {
     public class NoRepetition : RepetitionType
     {
+        [Obsolete("Нельзя создавать данный объект напрямую. Воспользуйтесь соответсвующей фабрикой", true)]
+        public NoRepetition() { }
+
         public override int DaysUntilNextOperation => 0;
 
         public override int LeftOperationsAmount => 1;
